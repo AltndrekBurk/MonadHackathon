@@ -1,0 +1,58 @@
+{
+  "name": "monad-parallel-tester-framework",
+  "version": "1.0.0",
+  "description": "A comprehensive framework for testing smart contract parallel execution performance on the Monad blockchain",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && npm start",
+    "deploy": "cd backend && npm run deploy",
+    "test": "cd backend && npm test",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --write .",
+    "setup": "node scripts/setup.js"
+  },
+  "keywords": [
+    "monad",
+    "blockchain",
+    "parallel-execution",
+    "testing",
+    "framework",
+    "smart-contracts",
+    "ethereum",
+    "web3"
+  ],
+  "author": "Monad Parallel Tester Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.0",
+    "solc": "^0.8.30"
+  },
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/monad-parallel-tester-framework.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/monad-parallel-tester-framework/issues"
+  },
+  "homepage": "https://github.com/your-org/monad-parallel-tester-framework#readme",
+  "dependencies": {
+    "@noble/hashes": "^2.0.1",
+    "ethers": "^6.15.0"
+  }
+}
